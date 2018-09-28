@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col-lg-5">
+        <!--begin::Portlet-->
+        <div class="m-portlet m-portlet--mobile" id="m_portlet">
+            <div class="m-portlet__head">
+                <div class="m-portlet__head-caption">
+                    <div class="m-portlet__head-title--inline">
+                        <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                            <li class="m-nav__item m-nav__item--home">
+                                <span class="m-portlet__head-icon">
+                                    <i class="la la-home"></i>
+                                </span>
+                                菜单架构
+                            </li>
+                        </ul>
+                        <div class="pull-right">
+                            <button id="btn_add" type="button" class="btn btn-sm m-btn--square btn-primary">新增</button>
+                            <button id="btn_edit" type="button" class="btn btn-sm m-btn--square btn-success">修改</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-portlet__body">
+                <div id="menu_tree" class="tree-demo jstree jstree-default"></div>
+            </div>
+        </div>
+        <!--end::Portlet-->
+    </div>
+    <div class="col-lg-7">
+        <!--begin::Portlet-->
+        <div class="m-portlet" >
+            <div class="m-portlet__head">
+                <div class="m-portlet__head-caption">
+                    <div class="m-portlet__head-title">
+							<span class="m-portlet__head-icon">
+								<i class="la la-cubes"></i>
+							</span>
+                        <h3 class="m-portlet__head-text">
+                            维护面板
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <form id="menu_form" action="javascript:void(0);" class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed">
+                <div class="m-portlet__body">
+                    <input id="data_id" hidden>
+                    <input id="data_pid" hidden>
+                    <div class="form-group m-form__group row">
+                        <label class="col-lg-2 col-form-label"> 菜单名称: </label>
+                        <div class="col-lg-9">
+                            <input id="data_menu" type="text" class="form-control m-input" placeholder="菜单名称">
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <label class="col-lg-2 col-form-label"> 请求地址: </label>
+                        <div class="col-lg-9">
+                            <input id="data_url" type="text" class="form-control m-input" placeholder="请求地址">
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <label class="col-lg-2 col-form-label"> 图标样式: </label>
+                        <div class="col-lg-9">
+                            <input id="data_icon" type="text" class="form-control m-input" placeholder="图标样式">
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <label class="col-lg-2 col-form-label"> 所属权限: </label>
+                        <div class="col-lg-9 m-radio-inline">
+                            <label class="m-radio">
+                                <input type="radio" name="data_level" value="1">
+                                普通管理员
+                                <span></span>
+                            </label>
+                            <label class="m-radio">
+                                <input type="radio" name="data_level" value="2">
+                                系统管理员
+                                <span></span>
+                            </label>
+                            <label class="m-radio">
+                                <input type="radio" name="data_level" value="3">
+                                超级管理员
+                                <span></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+                        <div class="m-form__actions m-form__actions--solid">
+                            <div class="row">
+                                <div class="col-lg-5"></div>
+                                <div class="col-lg-7">
+                                    <button id="btn_submit" class="btn btn-brand">确定</button>
+                                    <button type="reset" class="btn btn-secondary">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--end::Portlet-->
+    </div>
+</div>
+<script src="../assets/core/actions/system/tree.js" type="text/javascript"></script>
